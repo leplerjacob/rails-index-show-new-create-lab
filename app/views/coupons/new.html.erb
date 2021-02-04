@@ -1,0 +1,22 @@
+<h1>New Coupon</h1>
+
+<%# <%= form_with url: "/coupons/:id", method: :post do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %> %>
+
+<%= form_tag :create do %>
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :coupon_code %><br>
+
+  <label>Store</label><br>
+  <%= text_area_tag :store %><br>
+
+  <%= submit_tag "Submit Article" %>
+<% end %> 
+
+<%# OLD %>
+<%# <%= render 'form', coupon: @coupon %>
+
+<%= link_to 'Back', coupons_path %>
